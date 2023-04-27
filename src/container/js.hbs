@@ -1,0 +1,118 @@
+
+<main>
+ <div>
+     <div><h2> {{name}}</h2></div>
+     <div> Description: <q>{{description}}</q></div>
+      <div> History: {{#with history}}
+        <div>Year: {{year}}</div>
+        <div>Founder: {{founder}}</div>
+        {{/with}}
+      </div>
+       <br>  
+         <div> <h4>Types: </h4>  
+           <button type="button" class="btn btn-info">Number</button>
+           <button type="button" class="btn btn-info">String</button>
+           <button type="button" class="btn btn-info">Boolean</button>
+           <button type="button" class="btn btn-info">Null</button>
+           <button type="button" class="btn btn-info">Symbol</button>
+           <button type="button" class="btn btn-info">Object</button>
+         </div>  
+         
+          <h4>Syntax: </h4>  {{#with syntax}}
+            <ul>
+              <li>  
+            <h5>Functions: </h5>  
+                  
+              <button type="button" functions="btn btn-info">
+                <span class="badge text-bg-functionsinfo">functuions</span>
+                </button> 
+                 
+              <div> <h5>Variables: </h5> 
+                <button type="button" variables="btn btn-info">
+                <span class="badge text-bg-info">var</span>
+                </button> 
+                <button type="button" variables="btn btn-info">
+                <span class="badge text-bg-info">let</span>
+                </button> 
+                <button type="button" variables="btn btn-info">
+                <span class="badge text-bg-info">const</span>
+                </button> 
+              </div> 
+              
+              <div> <h5>Conditionals: </h5>  
+                <button type="button" conditionals="btn btn-info">
+                <span class="badge text-bg-info">if</span>
+                </button> 
+                <button type="button" conditionals="btn btn-info">
+                <span class="badge text-bg-info">else</span>
+                </button> 
+                <button type="button" conditionals="btn btn-info">
+                <span class="badge text-bg-info">switch</span>
+                </button> 
+              </div>
+                
+              <div> <h5>Loops:</h5>  
+                <button type="button" class="btn btn-info">
+                <span class="badge text-bg-info">for</span>
+                </button> 
+                <button type="button" class="btn btn-info">
+                <span class="badge text-bg-info">while</span>
+                </button> 
+                <button type="button" class="btn btn-info">
+                <span class="badge text-bg-info">do-while</span>
+                </button>   
+                
+                              
+              </div>
+
+              <div> <h5>Classes:  </h5>  
+                <button type="button" class="btn btn-info">
+                <span class="badge text-bg-info">class</span>
+                </button>    
+              </div>
+          {{/with}} 
+          </li>
+          </ul>
+
+
+          <div> <h4>Features: </h4>  
+            {{#each features}}
+            <ul><li>{{this}}</li></ul>
+            {{/each}}
+          </div> 
+          <div> <h4>Libraries: </h4>  
+          <button type="button" class="btn btn-info">jQuery</button>
+          <button type="button" class="btn btn-info">React</button>
+          <button type="button" class="btn btn-info">Angular</button>
+          <button type="button" class="btn btn-info">Vue</button>
+          <button type="button" class="btn btn-info">Node.js</button>
+          <button type="button" class="btn btn-info">Express.js</button>
+          <button type="button" class="btn btn-info">Lodash</button>
+          <button type="button" class="btn btn-info">Moment.js</button>
+          </div>  
+
+          <div> <h4>Tools: </h4>  
+          <button type="button" class="btn btn-info">Babel</button>
+          <button type="button" class="btn btn-info">Webpack</button>
+          <button type="button" class="btn btn-info">ESLint</button>
+          <button type="button" class="btn btn-info">Jest</button>
+          <button type="button" class="btn btn-info">Mocha</button>
+          <button type="button" class="btn btn-info">Chai</button>
+          <button type="button" class="btn btn-info">Selenium</button>
+          <button type="button" class="btn btn-info">Cypress</button>
+          </div>  
+         
+          <div> <h4> Community: </h4>
+          <ul>{{#each community}} 
+            <li> 
+              <div> Name:{{name}}</div> 
+              <div> Type: {{type}}</div>
+              <br>
+            </li>
+            {{/each}}
+          </ul> 
+          </div>
+  </div>
+
+</main>
+ 

@@ -1,16 +1,13 @@
 <div>
-  <div><h2>WEB</h2></div>
-
-  
+  <div><h2>WEB</h2></div> 
     <div><h3> Langueges: {{#each web.languages}}</h3>  
     <ul>  
        <li>
         <p>
-           <div><h4>{{name}}</h4></div>
+           <div><h4> {{name}}</h4></div>
            <div> Version: {{version}}</div>
            <div> Description: <q>{{description}}</q></div>
-        <br>
-         
+        <br>        
         <div>{{#if elements}} 
          Elements:
           <ul> 
@@ -32,11 +29,9 @@
                   <br>
               </li>
             {{/each}}
-          </ul>
-         
+          </ul>        
           {{/if}}
         </div>
-
         <div>{{#if properties}}
          Properties:
           <ul>  {{#each properties}}              
