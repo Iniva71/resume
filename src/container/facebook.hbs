@@ -1,11 +1,12 @@
 <main>
   <div>
     <div><h2>{{name}}</h2></div>
+
     <div><h3>Users:</h3> {{#each users}}
     <ul>
         <li>
             <div> {{> id}}</div>
-            <div>friends: 
+            <div>Friends: 
               <ul>{{#each friends}}
                   <li>
                     <div> {{> id}} </div>
@@ -14,33 +15,26 @@
                       
                           <li> 
                               <div>{{> id}}</div>
+                              
                           </li>
                           {{/each}}
                       </ul>
                     </div>
+                  <div>{{#if groups}}
+                 <div>{{> groups}}</div>
+                  {{/if}}
+                  </div>
 
+                  
                 </li>
                 {{/each}}
               </ul>
             </div>
             
-            <div>groups:<ul> {{#each groups}}
-                
-                  <li>
-                       <div>id:{{id}}</div>
-                       <div> name: {{name}} </div>
-                       <div> description:<q> {{description}}</q> </div>
-                       <div> members:<ul> {{#each members}}
-                            <li> 
-                              <div> {{> id}}</div>
-                            </li> 
-                            {{/each}}
-                            </ul>
-                       </div>
-                  </li>
-                  {{/each}}
-                </ul>
-            </div>
+             <div>{{#if groups}}
+                 <div>{{> groups}}</div>
+              {{/if}}
+             </div>
             <hr>
             
       </li>
