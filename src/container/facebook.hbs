@@ -2,8 +2,46 @@
   <div>
     <div><h2>{{name}}</h2></div>
 
+    <div><h3>Users:</h3> {{#each users}}
+    <ul>
+        <li>
+            <div> {{> id}}</div>
+            <div>Friends: 
+              <ul>{{#each friends}}
+                  <li>
+                    <div> {{> id}} </div>
+                    
+                    <div>mutual_friends:<ul> {{#each mutual_friends}}
+                      
+                          <li> 
+                              <div>{{> id}}</div>
+                              
+                          </li>
+                          {{/each}}
+                      </ul>
+                    </div>
+                  <div>{{#if groups}}
+                 <div>{{> groups}}</div>
+                  {{/if}}
+                  </div>
 
+                  
+                </li>
+                {{/each}}
+              </ul>
+            </div>
+            
+             <div>{{#if groups}}
+                 <div>{{> groups}}</div>
+              {{/if}}
+             </div>
+            <hr>
+            
+      </li>
+    {{/each}}
+  </ul>
 
+    </div>
 
   </div>
 </main>
