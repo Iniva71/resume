@@ -1,0 +1,184 @@
+<main>
+
+    <div class="display-5"> Heading</div>  
+    <hr>
+    <div>  <ul>{{#with heading}}  
+        <li> 
+            <div class="display-6"> Main:</div> 
+            <div><ul> {{#with main}}
+                    
+                        <li>
+                         {{> task21}}
+                        </li>
+                {{/with}}
+            </ul>
+            </div>
+            <div class="display-6">Second:</div> 
+            <div><ul> {{#with second}}
+                    
+                        <li>
+                         {{> task21}}
+                        </li>
+                {{/with}}
+            </ul>
+            </div>
+
+            <div class="display-6">Subblock:</div> 
+            <div><ul> {{#with subblock}}
+                    
+                        <li>
+                         {{> task21}}
+                        </li>
+                {{/with}}
+            </ul>
+            </div>              
+        </li>
+    {{/with}}
+    </ul>
+    </div>
+
+    <div class="display-5"> Nested display</div>  
+    <hr>
+    
+    <div><ul>{{#with nested_display}}
+        <li>
+            <div>Title: {{title}}</div>
+            <br>
+            <div> Children_display: 
+                <ul> {{#with children_display}} 
+                    <li>
+                        <div> Title: {{title}}</div>
+                        <br>
+                        <div>Text: <q>{{text}} </q></div>
+                        <br>
+                        <div> Button: {{#with button}}
+                            <div>text: {{text}}</div>
+                        {{/with}}
+                        </div>
+                     <br>
+                    </li>
+                    {{/with}}
+               </ul>
+            </div>
+
+        </li>
+        {{/with}}
+    </ul>
+
+    </div>
+    <div class="card">
+         
+    
+    <div class="display-5" > Paragraph</div>  
+      
+    <div> <ul>{{#with paragraph}}
+        <li>
+           <div> Title: {{title}}</div>
+            <br>
+            <div>Text: <q>{{text}} </q></div>
+            <br>
+            <div> Button:<ul> {{#with button}}
+                <br>
+                <li> 
+                <div>text: {{text}}</div>
+                <button class="btn btn-link"> Link</button>
+                 
+                </li>
+            {{/with}}
+            </ul>
+            </div>
+            
+            <div>List name: <ul>{{#each list_name}}
+                <br>
+                 <li>
+                    <div> Text: {{text}}</div>
+                    <div> URL: {{url}}</div>
+                    <button class="btn btn-link"> Link</button>
+                 </li>
+            {{/each}}
+            </ul>
+           
+            </div>
+            <br>
+        </li>
+        {{/with}}
+    </ul>
+    </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="card">
+        <div class="card-body">
+            <div> <h1> H1 Heading</h1> </div>
+            <div class="text-dark"> Paragraph</div>
+            <br>
+            <div> <button class="btn btn-primary">Primary</button></div>
+            <br>
+
+            <div> <button class="btn btn-outline-primary">Outline Primary</button></div>
+    
+        </div>
+        </div>
+    <br>
+    <br>
+    <div class="card">
+        <div class="card-body">
+             <div> <h2> H1 Heading second</h2> </div>
+             <div class="text-muted"> Paragraph</div>
+             <br>
+             <div><button class="btn btn-secondary"> Secondary</button> </div>
+             <br>
+             <div><button class="btn btn-outline-secondary">Secondary</button> </div>
+              <hr>
+              <hr>
+             <div> <h3> H3 Heading subblock</h3> </div>
+             <div class="text-muted"> Paragraph</div>
+             <br>
+             <div><button class="btn btn-dark"> Dark </button> </div>
+             <br>
+             <div><button class="btn btn-outline-dark">Dark</button> </div>
+             
+        </div>
+        </div>
+
+    <br>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            <div class="display-1">Display 1 nested</div>
+            <hr>
+            <div class="display-4">Display 4 children</div>
+            <br>
+            <div class="text-muted"> Paragraph</div>
+            <br>
+            <button class="btn btn-outline-warning">Warning</button>
+            <hr>
+            <div><h6>H6 Heading</h6></div>
+            <button class="btn btn-info"> Info </button>
+        </div>
+        </div>
+        <br>
+        <br>
+        <div class="card">
+            <div class="card-body">
+            <h6 class="text-uppercase"> Paragraph</h6>
+            <br>
+            <h6 class="text-lowercase"> Paragraph</h6>
+            <br>
+            <p class="text-info">Link</p>
+            <hr>
+            <ul>
+                <li>
+                    <p class="text-info">Link</p>
+                </li>
+            </ul> 
+            <ul>
+                <li>
+                    <p class="text-info">Link</p>
+                </li>
+            </ul>      
+                
+        </div>    
+        </div>
+      </main>  
