@@ -1133,7 +1133,7 @@ router.get('/task22', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task22', {
-    layout:'basic',
+    layout: 'basic',
     page_header: {
       title: 'InnovaMind',
       description: 'Welcome to our wonderful community',
@@ -1187,6 +1187,15 @@ router.get('/task22', function (req, res) {
 })
 
 // ================================================================
+router.get('/card', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('card', {
+    layout: 'basic',
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
 // ================================================================
 // Підключаємо роутер до бек-енду
