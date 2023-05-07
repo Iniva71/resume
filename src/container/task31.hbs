@@ -1,0 +1,77 @@
+<main>
+  <div class="row">
+      <div>{{#with navigation}}  
+           {{!-- links --}}  
+                <a href="https://github.com/" class="btn btn-link"> Home </a>
+                <a href="https://www.google.com/"class="btn btn-link"> Contacts </a>
+                <a href="https://www.youtube.com/"class="btn btn-link"> Help </a>
+                <a href="https://nodejs.org/en/" class="btn btn-primary">Lets start</a>                
+        {{/with}} {{!-- navigation --}}
+        </div>       
+        <hr>
+
+      <div> {{#with header}}
+            <div> <h1> {{title}}</h1></div>
+            <div><q>{{description}}</q></div>
+            <br>
+            <a href="https://github.com/" class="btn btn-primary">Learn More</a>
+       {{/with}}
+      </div>
+    <hr>
+     
+    
+      
+        <div> {{#with city}}
+
+          <div><h2> {{title}}</h2></div>
+
+         <section class="col-12"> 
+          <div>{{#each cards}}
+             
+            <div class="row g-3">
+              <div class="col-5">
+
+              
+            <div class="card">
+               <div class="card-body"> 
+
+                  <div> {{#with picture}}
+                  <div> <img class="card-img-top" src="https://picsum.photos/400/200">  
+                  {{alt}}</div>
+                  {{/with}}  
+                   </div>
+             
+
+              <div><h4> {{title}}</h4></div>
+              <div>{{description}}</div>
+              <div>{{#with button}}
+                <div class="btn btn-primary">{{text}} {{href}}</div>
+                {{/with}}
+              </div>
+
+              </div>
+             </div>
+            </div>
+          {{/each}} {{!-- cards --}}
+          
+         </div>
+         </section>
+
+        {{/with}}
+        </div>
+    
+
+      
+
+
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+
+      
+                                     
+  </div>
+</main>
