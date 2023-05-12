@@ -1,5 +1,5 @@
 
-<main>
+<main class="p-5">
  <div>
      <div><h2> {{name}}</h2></div>
      <div> Description: <q>{{description}}</q></div>
@@ -18,7 +18,7 @@
            <button type="button" class="btn btn-info">Object</button>
          </div>  
          
-          <div><h4>Syntax: </h4>  {{#with syntax}}
+          <div class="my-4"><h4>Syntax: </h4>  {{#with syntax}}
             <ul>
               <li>  
             <h5>Functions: </h5>  
@@ -39,7 +39,7 @@
                 </button> 
               </div> 
               
-              <div> <h5>Conditionals: </h5>  
+              <div class="my-4"> <h5>Conditionals: </h5>  
                 <button type="button" conditionals="btn btn-info">
                 <span class="badge text-bg-info">if</span>
                 </button> 
@@ -51,7 +51,7 @@
                 </button> 
               </div>
                 
-              <div> <h5>Loops:</h5>  
+              <div class="my-4"> <h5>Loops:</h5>  
                 <button type="button" class="btn btn-info">
                 <span class="badge text-bg-info">for</span>
                 </button> 
@@ -63,7 +63,7 @@
                 </button>                         
               </div>
 
-              <div> <h5>Classes:  </h5>  
+              <div class="my-4"> <h5>Classes:  </h5>  
                 <button type="button" class="btn btn-info">
                 <span class="badge text-bg-info">class</span>
                 </button>    
@@ -74,12 +74,12 @@
           </div>
 
 
-          <div> <h4>Features: </h4>  
+          <div class="my-4"> <h4>Features: </h4>  
             {{#each features}}
             <ul><li>{{this}}</li></ul>
             {{/each}}
           </div> 
-          <div> <h4>Libraries: </h4>  
+          <div class="my-4"> <h4>Libraries: </h4>  
           <button type="button" class="btn btn-info">jQuery</button>
           <button type="button" class="btn btn-info">React</button>
           <button type="button" class="btn btn-info">Angular</button>
@@ -90,7 +90,7 @@
           <button type="button" class="btn btn-info">Moment.js</button>
           </div>  
 
-          <div> <h4>Tools: </h4>  
+          <div class="my-4"> <h4>Tools: </h4>  
           <button type="button" class="btn btn-info">Babel</button>
           <button type="button" class="btn btn-info">Webpack</button>
           <button type="button" class="btn btn-info">ESLint</button>
@@ -101,7 +101,7 @@
           <button type="button" class="btn btn-info">Cypress</button>
           </div>  
          
-          <div> <h4> Community: </h4>
+          <div class="my-4"> <h4> Community: </h4>
           <ul>{{#each community}} 
             <li> 
               <div> Name:{{name}}</div> 
