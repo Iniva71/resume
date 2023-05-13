@@ -1459,6 +1459,27 @@ router.get('/nav', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('nav', {
     layout: 'basic',
+    list: [
+      { name: 'Firstname' },
+      { name: 'Second name' },
+      { name: 'Error name' },
+      { name: 'Submit Firstname' },
+    ],
+    user: {
+      name: {
+        value: 'Inna',
+      },
+      role: {
+        text: 'Admin',
+      },
+      isConfirm: {
+        value: 'true',
+      },
+
+      age: {
+        value: 51,
+      },
+    },
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
