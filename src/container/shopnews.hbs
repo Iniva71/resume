@@ -1,3 +1,50 @@
 <main>
-    ghj
+    {{> breadcrumb}}
+    <hr>
+    <br>
+    <br>
+    <div class="m-3">
+        <div class="card"> {{#with newsData}}
+            <img class="card-img-top" src="{{photo}}"> 
+
+            <div class="card-body">{{#with head}}
+                
+                <div class="card-title"><h2> {{heading}}</h2></div>
+               
+                <div><q> {{description}}</q></div>
+                
+                {{/with}}
+            </div>
+            <div> 
+                <ul>{{#each body}}
+                <li> 
+                    <div><b>{{title}}</b> </div> 
+                    <div>{{text}}  </div>  
+                </li>
+                {{/each}}
+                </ul>
+            </div>
+            {{/with}}
+        </div>
+    </div>
+
+<br>
+<hr>
+<br>
+
+<div> {{#with newsOtherBlock}}
+            {{> shoppost}}
+      {{/with}}
+</div>
+<br>
+<hr>
+<br>
+<br>
+<div>
+    {{> shopaction}}
+</div>
+<br>
+<hr>
+<br>
+
 </main>
