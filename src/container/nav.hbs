@@ -1,5 +1,29 @@
 <main class="p-5">
     <p><h2>NAV</h2></p>
+    <div>
+        <ul>
+            {{#each list}}
+            <li>
+                
+                <button {{#if @last}} disabled {{/if}}> {{name}}-{{@index}}</button>
+            </li>
+            {{/each}}
+<br>
+<hr>
+<br>
+           {{#each user}}
+            <li>
+                {{@key}}: 
+                {{#if value}}{{value}}{{else}}{{text}}{{/if}},
+             </li>
+            {{/each}}
+
+
+        </ul>
+    </div>
+
+
+
     <div class="card mb-5"> 
         <div class="nav">
             <div class="nav-item">
