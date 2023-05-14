@@ -1,0 +1,118 @@
+<main>
+     
+    <div class="col-12 ps-2 pt-3 pb-3">
+        <ol class="breadcrumb"> {{#each breadcrumb}}
+            <li class="breadcrumb-item">
+              <a href="{{url}}">{{name}}</a>
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+
+    <div class="row col-12 m-4">{{#with productData}}
+        <section class="col-6">
+            <div class="card p-2">
+                <img class="card-img-top" src="https://picsum.photos/400/200">
+            </div>  
+            
+        </section>
+        
+         <div class="col-5 ms-2"> 
+            <ul class="list-group">{{#each actionList}}
+                <li class="list-group-item"> {{name}} {{isWarning}} {{isError}} {{isSuccess}} {{isGood}}</li>
+            {{/each}}    
+            </ul>
+        </div>
+        
+        
+
+        <section class="col-6 ps-2 pt-3 pb-3">{{#with info}}
+            <div class="card"> 
+                <div class="card-title  m-2"><h4> {{title}} </h4></div>
+                <dv class="m-2"><q>{{about}} </q></dv>
+                <div class="m-2"> <h4> Prise: {{price}}</h4> </div>
+                <div class="m-2">{{#each category}}
+                     
+                        {{#if isHot}}<span class="badge text-bg-warning"> Hot</span>{{/if}}
+                        {{#if isNew}}<span class="badge text-bg-primary"> New </span> {{/if}}
+                        {{#if isBonus}}<span class="badge text-bg-info"> Bonus</span> {{/if}}
+                     
+                    {{/each}}
+                </div>
+            </div>
+            {{/with}}
+
+        </section>
+
+        <div class="card col-5 mb-5"> {{#with item}}
+             <table class="table">
+                <thead>
+                    <tr>
+                        {{#each head}}
+                        <th>{{this}}</th>
+                        {{/each}}
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each body}}
+                    <tr>
+                        {{#with this}}
+                        <th>{{this.[0]}}</th>
+                        <td>{{this.[1]}}</td>
+                        <td>{{this.[2]}}</td>
+                        {{/with}}
+                    </tr>
+                    {{/each}}
+                </tbody>
+             </table>
+             {{/with}}
+        </div>
+
+     <div class="col-6"></div>
+      
+
+    <div class="alert alert-danger col-5 ps-4">{{#with alert}}
+        {{text}}
+        {{/with}}
+    </div>
+    
+    {{!-- <div class="alert alert-info col-5 m-2"> {{#with param}}
+        <div>{{title}}</div>
+        <div>{{#each list}}
+            {{this}}
+            {{/each}}
+        </div>
+
+        {{/with}}
+    </div> --}}
+
+    <div class="card col-11 me-5">
+        <div class="card-body"> 
+    <button class="btn btn-warning  m-3"> Повідомлення</button>
+    <button class="btn btn-outline-danger  m-3">Вподобати</button>
+    <button class="btn btn-success  m-3 "> Швидка доставка</button>
+    <button class="btn btn-outline-success  m-3 "> Доставка</button>
+        </div>
+    </div>
+    {{/with}}
+    </div>
+
+       <div class="text-center m-3">{{#with goodsOtherBlock}}
+          <div class="mb-3 mt-5"><h3> See other products </h3></div>
+          <div class="row g-3 mb-4">{{#each cards}}
+            <div class="col-4"> 
+              {{> shopcard}}
+              </div>
+            {{/each}}
+          </div>
+         
+        {{/with}}
+       </div>
+
+      <div class="my-3"> {{> shopaction}} {{rel}}</div> 
+      <br>
+      <hr>
+      <br>
+</main>
+   
+ 
