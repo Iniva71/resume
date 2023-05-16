@@ -65,5 +65,135 @@
 
         </div>
     </div>
-    
+
+    {{!-- компоненти форма --}}
+<div class="p-5">
+    <div class="row g-5"> 
+
+        <div class="col-12">
+            <div>
+                <label class="form-label">Email address</label>
+                <input class="form-control">
+                <div class="form-text text-danger"> Error ! You need to set correct email !</div>
+            </div>
+
+        </div>
+        <hr>
+        <br>
+        <b class="m-5">Text field <q> Текстове поле: заголовок, саме поле, підсказка</q></b></div>
+        <br>
+        <div class="col-12">
+                <div>
+                    <label class="form-label">Email address</label>
+                    <div class="row">
+                        <div class="col-6">
+                            <input class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-text text-danger"> Error ! You need to set correct email !</div>
+                </div>
+
+        </div>
+
+        <div class="col-12">
+            <div>
+                <label class="form-label">Email address</label>
+                <input disabled class="form-control">{{!-- disabled --}}
+                <div class="form-text text-danger"> Error ! You need to set correct email !</div>
+            </div>
+        </div>
+<br>
+<hr>
+<br>
+<div> 
+        <div class="col-12">
+            
+            <div class="row"> 
+                <div class="col-3 rt-1">
+                  <label class="form-label">Email address</label>
+                </div>
+                <div class="col-4">
+                   <input class="form-control">
+                </div>
+                <div class="col-4 ps-4 pt-1">
+                    <div class="form-text text-danger"> Error! You need to set correct email!</div>
+                </div>   
+           </div>
+        </div>  
+
+<hr>
+<br>
+<b class="m-5">  Розкривний список </b>
+<br>
+<div class="col-12">
+  <label class="form-label">Розкривний список</label>
+  <select class="form-select form-selrct -sm">
+    <option selected> Open List </option>
+    <option value="1">Admin</option>
+    <option value="2">User</option>
+  </select>
+  <div class="form-text text-info"> Info</div>
+</div>
+<br>
+<hr>
+<br>
+ <b class="m-5"> Check field <q>Вибираемо декілька позицій</q> </b>
+ <div class="col-12">
+    <div class="form-label"> <b>Fruit</b>
+        <div class="form-check">
+            <label class="form-check-label"> Apple</label>
+            <input name="food" type="checkbox" class="form-check-input">
+        </div>
+
+        <div class="form-check">
+            <label class="form-check-label"> Lemon</label>
+            <input name="food" type="checkbox" class="form-check-input">
+        </div>
+
+        <div class="form-check">
+            <label class="form-check-label"> Bannana</label>
+            <input name="food"  type="checkbox" class="form-check-input">
+        </div>
+    </div>
+ </div>
+<br>
+<hr>
+<br>
+<b class="m-5"> Radio field <q>Вибираемо лише одну позицію</q></b>
+ <div class="col-12">
+    <div class="form-label"> <b>Fruit</b>
+        <div class="form-check">
+            <label class="form-check-label"> Apple</label>
+            <input name="food" type="radio" class="form-check-input">
+        </div>
+
+        <div class="form-check">
+            <label class="form-check-label"> Lemon</label>
+            <input name="food" type="radio" class="form-check-input">
+        </div>
+
+        <div class="form-check">
+            <label class="form-check-label"> Bannana</label>
+            <input name="food"  type="radio" class="form-check-input">
+        </div>
+    </div>
+ </div>
+
+<br>
+<hr>
+<br>
+        <b class="m-5"> Switch field <q> Поле-перемикач</q></b>
+        <div class="col-12">
+                <div class="form-check form-switch"> 
+                <input  type="checkbox" class="form-check-input">
+                </div>
+        </div>
+
+<br>
+<hr>
+<br>
+</div>
+</div>  
+
+
 </main>
