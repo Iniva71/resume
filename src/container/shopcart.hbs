@@ -1,0 +1,80 @@
+<main>
+    <div> {{#with header}} 
+        <div><h2 class="ms-3">{{title}}</h2></div>
+         <div> {{#with button}}   
+                  <div> 
+                   <button class="btn btn-light mt-4  mb-4" href="{{link}}"> {{text}} </button>
+            </div> 
+           {{/with}}
+         </div>
+       {{/with}}
+    </div>
+    
+    {{> cartGoodsItem}}
+    
+    <hr>
+    <br>
+    <div>
+        {{#with goodsOtherBlock}}
+           <div class="display-6 text-center my-3 mb-3 ">{{title}}</div>
+    <section class="col-12 ps-3 mb-4"> 
+         <div class="row col-12 g-3">
+            {{#each cards}}
+                <div class="col-4"> 
+                     <div class="card">
+                         <img class="card-img-top" src="{{image}}"> 
+                        <div class="card-body">
+                         
+                            <div class="card-header"> <h4> {{title}} </h4>
+                                <div>
+                                {{#if isHot}}<span class="badge text-bg-warning"> Hot</span>{{/if}}
+                                {{#if isNew}}<span class="badge text-bg-primary"> New </span> {{/if}}
+                                </div>      
+                            </div>
+
+                            <div><q> {{description}}</q></div>            
+                        </div>
+                    </div>
+                </div>
+            {{/each}} 
+        </div>
+    </section>
+        {{/with}}
+    </div>
+     <br>
+     <hr>
+     <br>
+     <div> {{#with total}}
+        <div><h5> {{title}}</h5></div>
+        <div><h2>{{amount}}</h2></div>
+        <div>{{delivery}}</div>
+        <div>{{#each buttons}}
+        <div>
+            {{#if isSuccess}}<button class="btn btn-success my-3" href="{{link}}" >{{text}}</button>{{/if}}
+            {{#if isOutline}}<button class="btn btn-outline-success mb-3" href="{{link}}">{{text}}</button>{{/if}}
+        </div>
+        {{/each}}
+    </div> 
+        {{/with}}</div>
+     <hr>
+     <br>
+     
+     
+     <div class="card text-bg-dark"> {{#with subscribe}} 
+            <div class="ms-4"><h2>{{header}} </h2>
+            <p> {{description}}</p></div>
+        <div class="card-body">
+            
+            <div class="ms-2"> {{#each buttons}}   
+                   
+            <div>  <button class="btn btn-primary mt-2  mb-2" href="{{link}}"><h5> {{text}}</h5> </button></div>
+             
+           {{/each}}
+         </div>
+        </div>
+       {{/with}}
+</div> 
+    <br>
+    <hr> 
+
+</main>

@@ -47,6 +47,7 @@
                                     </div>
 
                                     <br>
+                                    <br>
                                     <div>{{#each switch}}
                                         <div class="form-check form-switch">
                                             {{#if isActive}} <label class="form-check-label">{{text}}</label>{{/if}}
@@ -60,17 +61,17 @@
 
                                 {{/with}}
                             </div>
-
+                            <br>
                             {{#with delivery}}
                             <div>
                                 <h3>{{title}}</h3>
                             </div>
                             <div>
                                 <div class="card col-5">
-                                    <div class="card-body">
+                                    <div class="card-body row">
                                         
-                                        <div class="row col-6">{{#each select}}
-                                            <div >
+                                        {{#each select}}
+                                            <div class="col-6">
                                                 <label class="form-class"> {{label}} </label>
                                                 <select class="form-select">
                                                     <option selected>{{placeholder}}</option>
