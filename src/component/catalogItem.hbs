@@ -1,0 +1,28 @@
+<div class="card mb-3"> 
+                        <img class="card-img-top" src="{{img}}"> 
+
+                        <div class="card-body">
+                            
+                            <div class="mb-2">  
+                            {{#if isHot}}<span class="badge text-bg-warning"> Hot</span>{{/if}}
+                            {{#if isNew}}<span class="badge text-bg-danger"> New </span> {{/if}}
+                            {{#if isFast}}<span class="badge text-bg-success"> Fast</span>{{/if}}
+                            {{#if isFree}}<span class="badge text-bg-primary"> Free </span> {{/if}}</div>
+                            <div>{{#with review}}
+                                 {{amount}}  {{text}}
+                                {{/with}}
+                            </div>
+                             <div class="mb-3 mt-5"><h4>{{price}}</h4></div>
+                             <div class="mb-2">{{delivery}}</div>
+                             <div class="mb-3">{{#each buttons}}
+                                {{#if isPrimary}}<button class="btn btn-primary mb-3" href="{{link}}"> {{text}}</button>{{/if}}
+                                {{#if isSecondary}}<button class="btn btn-secondary" href="{{link}}"> {{text}}</button>{{/if}}
+                                {{/each}}
+                             </div>
+
+                             <div>{{#each characteristics}}
+                                <div>{{title}}{{value}}</div>
+                                {{/each}}
+                            </div>
+                    </div>
+                    </div>
