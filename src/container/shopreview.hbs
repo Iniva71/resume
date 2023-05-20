@@ -1,0 +1,145 @@
+<main>
+    <div class="row"> {{#with formBlock}}
+        <div class="col-8">
+            <div class="mb-5"><h1>{{header}}</h1></div>
+            <div>{{#with rating}}
+                 <div class="ms-3 mb-3">{{title}} : {{value}}</div>               
+                {{/with}} {{!-- rating --}}             
+            </div>
+            <div>{{#with actionBlock}}
+                 
+                        <div class="nav nav-tabs mb-5">       
+                            {{#each tabs}}
+                                <div class="nav-item">
+                                    <div class="nav-link {{#if isActive}} active {{/if}}">{{text}}  </div>        
+                                </div> 
+                           {{/each}}
+                        </div>
+                        <div class="card">{{#with report}}
+                            <div class="card-body">
+                                 <div class="mb-4"><h5>{{title}}</h5></div>
+                                 <div>{{#with button}}
+                                    <button class="btn btn-secondary" href="{{link}}">{{text}}</button>
+                                    {{/with}}
+                                 </div>
+                            </div>
+                          
+                        {{/with}}{{!-- report--}}
+                        </div>                                         
+                {{/with}}{{!-- actionBlock --}}              
+            </div>
+            <hr> 
+            <div>{{#with feedbackBlock}}
+                <div class="mb-5"><h2>{{title}}</h2></div>
+                <div class="mb-5">{{#each buttons}}
+                         
+                    {{#if isWarning}} <button class="btn btn-warning me-3 " href="{{link}}"> {{text}} </button>{{/if}}
+                    {{#if isSuccess}} <button class="btn btn-success me-3" href="{{link}}"> {{text}} </button>{{/if}}
+                    {{#if isDanger}} <button class="btn btn-danger" href="{{link}}"> {{text}} </button>{{/if}}
+                 
+                    {{/each}}
+                </div>
+               
+            {{/with}}{{!-- freedbackBlock --}}      
+            </div>
+            <hr>
+
+        </div> {{!-- col-8 --}}
+        
+        
+        <div class="col-4"> {{#with goodsInfo}}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <img class="card-img-top" src="{{photo}}"> 
+                    <div><h5>{{name}}</h5></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div><h3>{{price}}</h3> </div>
+                    {{#if inMarket}}<div class="my-2">true</div>{{/if}}
+                    <div class="mb-5">{{#each buttons}}
+                         
+                    <div>{{#if isPrimary}} <button class="btn btn-primary mb-2 " href="{{link}}"> {{text}} </button>{{/if}}</div>
+                    {{#if isSecondary}} <button class="btn btn-secondary" href="{{link}}"> {{text}} </button>{{/if}}        
+                    {{/each}}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card my-3">
+                <div class="card-body">{{#with seller}}
+                    <div>{{title}} : <b>{{value}} </b> </div>
+                    {{/with}}
+                </div>
+            </div>
+    
+           {{/with}} {{!-- goodsinfo --}}
+        </div>
+
+        {{/with}}  {{!-- formblock --}}
+    </div>
+
+
+
+    <div class="card m-2">{{#each reviewList}}
+        <div class="card-body">
+
+            <div class="card">
+                <div class="card-body ms-2">{{#with title}}
+                    <div><h4>{{userName}}</h4></div>
+                    <div>{{caption}}</div>
+                    <div class="mt-3">{{date}}</div>
+                   {{/with}}
+                </div>
+                <hr>
+                <div>{{#with reviewBody}}
+                       <div class="ms-2">{{#with seller}}
+                       <div>{{title}} : <b>{{value}} </b> </div>
+                       {{/with}}
+                       </div>
+                       <div class="my-3 ms-2">{{#with rating}}
+                       <div class="mb-3">{{title}} : {{value}}</div>               
+                       {{/with}} {{!-- rating --}}             
+                       </div>
+                       <div class="mb-5 ms-2">{{#each text}} <q> {{this}} </q>{{/each}}</div>
+                       <div class="ms-2 mb-3">{{#with advantages}}
+                           <div><b>{{title}} :</b></div>
+                           <div>{{text}}</div>
+                        {{/with}}
+                       </div>
+                       <div class="ms-2 mb-3">{{#with disadvantages}}
+                           <div><b>{{title}} :</b></div>
+                          <div>{{text}}</div>
+                        {{/with}}
+                       </div>
+                         
+                         <diV class="row">       {{#each images}}
+                         <div class="col-1 ms-2 mb-4">
+                            <img class="card-img-top" src="{{this}}" width="500" height="50"> 
+                            </div>
+                            {{/each}}
+                      
+                         </diV>
+                        
+                         
+                        <div class="card">{{#each coments}}
+                            <div class="card-body">
+                                <div class="card ms-2">
+                                    <div class="ms-2 mt-2"><h5>{{userName}}</h5></div>
+                                    <div class="ms-2 my-2">{{date}}</div>
+                                    <div class="ms-2 mb-2"><q>{{text}}</q></div>
+                                </div>          
+                            </div>                            
+                            {{/each}}
+                        </div>
+                       
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+
+     {{/each}}
+      {{!-- reviewList --}}
+    </div>
+</main>
