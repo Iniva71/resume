@@ -1,0 +1,98 @@
+<main>
+   {{> breadcrumb}}
+   <div><h1>{{header}}</h1></div>
+   <div class="row">{{#each sortBlock}}  
+        <div class="col-4">       
+            <select class="form-select">
+                <option selected>{{placeholder}}</option>
+                <div> {{#each options}}
+                    <option>{{value}}. {{text}}</option>
+                    {{/each}}
+                </div>
+            </select>
+        </div>                               
+    {{/each}}
+   </div> {{!--  sortBlock --}}
+
+      
+      <div class="row">
+        <div class="col-4"> 
+            <div class="card mt-3">
+                <div class="card-body"> {{#with filterBlock}}
+    
+                    <div class="form-label">{{#with sellers}}
+                        <div><b>{{title}}</b></div>
+                        <div>{{#each list}} 
+                                    <div class="form-check">
+                                        <label class="form-check-label">  {{namevalue}}</label>
+                                        <input name="food" type="checkbox" class="form-check-input"> {{value}}
+                                    </div>
+                            {{/each}}</div>
+                        {{/with}}
+                    </div><hr>
+                    <div class="mt-3">{{#with brands}}
+                        <div><b>{{title}}</b></div>
+                            <div>{{#with input}}          
+                                <input class="form-control" placeholder={{placeholder}}>                                
+                            {{/with}}
+                            </div>
+                                <div>{{#each options}} 
+                                    <div class="form-check">
+                                        <label class="form-check-label">  {{name}}</label>
+                                        <input name="food" type="checkbox" class="form-check-input"> {{value}}
+                                    </div>
+                            {{/each}}</div>
+
+                        {{/with}}
+                    </div>         <hr>   
+                   <div>{{#with price}}
+                        <div><b> {{title}} </b></div>
+                            <div class="mb-2">{{#with range}}          
+                                <input class="form-control" placeholder={{from}}>
+                                <input class="form-control" placeholder={{to}}>                                 
+                            {{/with}}
+                            </div>
+                            <div>{{#with button}}
+                                <button class="btn btn-outline-secondary" href="{{link}}">{{text}}</button>
+                                {{/with}}
+                            </div>
+                    {{/with}}
+                   </div>
+                   <hr>
+                   <div>{{#each filterList}}
+                    <div><b> {{title}}</b></div>
+                    <div>{{#each options}} 
+                                    <div class="form-check">
+                                        <label class="form-check-label">  </label>
+                                        <input name="food" type="checkbox" class="form-check-input"> {{value}}
+                                    </div>
+                            {{/each}}</div>
+                            <hr>
+                    {{/each}}
+                   </div>
+                {{/with}}
+                </div>              
+            </div>
+        </div> 
+        <div class="col-8 mt-3">
+              <div class="row">
+                <div> 
+                    <div class="row">{{#each goodsList}}
+                        <div class="col-6">
+
+                    
+                    {{> catalogItem}}
+                    
+
+                        </div>
+                        {{/each}} 
+
+                    </div>
+                    
+                </div>
+              </div>
+        </div>
+
+      </div>  
+      {{> shopaction}}
+</main>
